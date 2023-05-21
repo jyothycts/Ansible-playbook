@@ -13,4 +13,10 @@
                     state: present
                     update_cache: yes
                     
+           - name: "storing facts in a file"
+             copy:
+                    dest: "/tmp/facts-in-file"
+                    content: "The number of processors on this host : {{ ansible_processor_count }}"
+
+                    
                     
