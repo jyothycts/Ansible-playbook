@@ -1,0 +1,16 @@
+---
+- name: "creating users"
+  hosts: all
+  tasks:
+           - name: "creating bob user"
+             user: 
+                    name: bob
+                    state: present
+                    
+           - name: "pkgs installation"
+             apt:
+                    name: nginx
+                    state: present
+                    update_cache: yes
+                    
+                    
